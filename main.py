@@ -60,6 +60,7 @@ for i in range(rows):
 
 
         #the color depends on biome and water type
+        '''
         if tilemap[i][j].subtype=="ocean":
             color=ocean
         elif tilemap[i][j].subtype=="lake":
@@ -94,6 +95,18 @@ for i in range(rows):
             color=tropical_rainforest
         elif tilemap[i][j].biome=="unknown":
             color=black
+        else:
+            color=black
+        '''
+        if tilemap[i][j].type=="water":
+            color=ocean
+        elif tilemap[i][j].biome=="beach":
+            color=beach
+        elif tilemap[i][j].type=="land":
+            r= int(tilemap[i][j].elevation*.5) if tilemap[i][j].elevation<=60 else 255
+            g = 92+tilemap[i][j].elevation if tilemap[i][j].elevation<=60 else 255
+            b= int(tilemap[i][j].elevation*.5) if tilemap[i][j].elevation<=60 else 255
+            color=(r,g,b)
         else:
             color=black
 
