@@ -103,9 +103,11 @@ for i in range(rows):
         elif tilemap[i][j].biome=="beach":
             color=beach
         elif tilemap[i][j].type=="land":
-            r= int(tilemap[i][j].elevation*.5) if tilemap[i][j].elevation<=60 else 255
-            g = 92+tilemap[i][j].elevation if tilemap[i][j].elevation<=60 else 255
-            b= int(tilemap[i][j].elevation*.5) if tilemap[i][j].elevation<=60 else 255
+            r= int(tilemap[i][j].elevation*.75) if tilemap[i][j].elevation<=60 else (tilemap[i][j].elevation*2.5 if tilemap[i][j].elevation*2.5<=255 else 255)
+
+            g = 75+tilemap[i][j].elevation if tilemap[i][j].elevation<=60 else (tilemap[i][j].elevation*2.5 if tilemap[i][j].elevation*2.5<=255 else 255)
+
+            b= int(tilemap[i][j].elevation*.75) if tilemap[i][j].elevation<=60 else (tilemap[i][j].elevation*2.5 if tilemap[i][j].elevation*2.5<=255 else 255)
             color=(r,g,b)
         else:
             color=black
