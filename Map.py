@@ -1,6 +1,9 @@
 import random, math, perlin, sys, tile, noise
 
 class Map(object):
+
+#*slaps roof of program*
+#this bad boy can hold so many if-statements
     
 
 ###############################################################################
@@ -328,6 +331,8 @@ class Map(object):
                     self.tilemap[i][j].humidity+=(self.tilemap[i][j].elevation/3.0)
 
 
+
+
         #Fan it a second time to disperse the additional humidity
         #######################################################################
         print("Evaporating...")
@@ -454,6 +459,6 @@ class Map(object):
 
 
         #TODO--Create populated areas
-        #TODO--Generate zones where trees are clustered (and plant individual trees within those clusters) 
+        #TODO--Generate zones where trees are clustered (and plant individual trees within those clusters)
         
         return self.tilemap
