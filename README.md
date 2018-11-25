@@ -6,4 +6,4 @@ dependencies are pygame and noise.
 
 just open a terminal and run "python3 main.py" once pygame and noise are installed.
 
-dont read the code, its embarassing :|
+example.png should show what can be expected if run correctly
